@@ -4,7 +4,7 @@ test('Read existing user profile with empty auth header', async ({
   registeredUser,
   profilesApi,
 }) => {
-  const response = await profilesApi.getProfile(registeredUser.username);
+  const response = await profilesApi.getProfile(registeredUser.username, '');
 
   await profilesApi.assertSuccessResponseCode(response);
 
